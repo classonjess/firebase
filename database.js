@@ -1,6 +1,4 @@
-import { initializeApp } from "firebase/app";
 (function() {
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyCXSgERUVBdBc_57tYO2-tZAG8mhBPvOOk",
@@ -13,7 +11,7 @@ const firebaseConfig = {
   };
   
   // Initialize Firebase
- const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
   //Handle on firebase db
 const db = firebase.database();
@@ -54,5 +52,5 @@ const db = firebase.database();
                  status.innerHTML += JSON.stringify(data[key]) + '<br>';
              });
          });
-  });
+        });
 }());
